@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #87CEEB;
+    font-family: Arial, sans-serif;
+    transition: background-color 1s;
+}
+
+.game-container {
+    position: relative;
+    width: 800px;
+    height: 200px;
+    border: 2px solid #000;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.dino {
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 10%;
+}
+
+.cactus {
+    position: absolute;
+    bottom: 0;
+    width: 30px;
+    height: 60px;
+    background-color: #008000;
+    right: -30px;
+}
+
+.cloud {
+    position: absolute;
+    top: 20px;
+    width: 80px;
+    height: 50px;
+    background-color: #b4b4b4;
+    border-radius: 50%;
+    box-shadow: 40px 20px 0 0 #fff, 80px 20px 0 0 #fff;
+    animation: moveClouds 20s linear infinite;
+}
+
+.bird {
+    position: absolute;
+    top: 50px;
+    width: 40px;
+    height: 20px;
+    background-color: #000;
+    clip-path: polygon(0% 50%, 25% 0%, 50% 50%, 25% 100%);
+    animation: moveBird 10s linear infinite;
+}
+
+.score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@keyframes moveClouds {
+    0% { left: 800px; }
+    100% { left: -200px; }
+}
+
+@keyframes moveBird {
+    0% { left: 800px; }
+    100% { left: -100px; }
+}
